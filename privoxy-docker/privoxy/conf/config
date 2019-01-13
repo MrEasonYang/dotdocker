@@ -1,0 +1,1 @@
+forward-socks5  / ${FORWARD_SOCKS5_ADDRESS}:${FORWARD_SOCKS5_PORT}  .
