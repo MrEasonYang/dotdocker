@@ -7,11 +7,11 @@ RUN \
   && rm /var/cache/apk/*
 
 ENV FORWARD_SOCKS5_ADDRESS 0.0.0.0
-ENV FORWARD_SOCKS5_PORT 8095
+ENV FORWARD_SOCKS5_PORT 8096
 
 EXPOSE 8118
 
-ADD privoxy/entrypoint.sh /entrypoint.sh
-ADD privoxy/conf /conf
+COPY entrypoint.sh /entrypoint.sh
+COPY privoxy/conf /conf
 
 ENTRYPOINT ["/entrypoint.sh"]
